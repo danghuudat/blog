@@ -8,7 +8,7 @@ var my_time;
 function pageScroll() {
     var objDiv = document.getElementById("contain");
     objDiv.scrollTop = objDiv.scrollTop + 1;
-    if ((objDiv.scrollTop + 400) == objDiv.scrollHeight) {
+    if ((objDiv.scrollTop + 1200) == objDiv.scrollHeight) {
         objDiv.scrollTop = 0;
     }
     my_time = setTimeout('pageScroll()', 40);

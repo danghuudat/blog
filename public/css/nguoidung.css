@@ -6,7 +6,7 @@ th{
     height: 40px
 }
 header {
-    height: 70px;
+    height: 200px;
 }
 #vnclock{
     font-weight:bold;
@@ -63,20 +63,20 @@ header {
 }
 #contain {
     position: absolute;
-    height: 400px;
+    height: 1200px;
     overflow: hidden;
     width: 100% !important;
 }
 .row_1{
     color: black;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin-bottom: 50px;
+    font-size: 7rem;
 
 }
 .row_2{
     color: red;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin-bottom: 50px;
+    font-size: 7rem;
 }
 #table_fixed thead th {
     font-size: 14px;
