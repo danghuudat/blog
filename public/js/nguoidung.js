@@ -1,10 +1,6 @@
 $(document).ready(function() {
     pageScroll();
-    $("#contain").mouseover(function() {
-        clearTimeout(my_time);
-    }).mouseout(function() {
-        pageScroll();
-    });
+
     getWidthHeader('table_fixed','table_scroll');
 });
 
