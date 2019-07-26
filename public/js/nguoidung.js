@@ -58,7 +58,7 @@ function getVNTime(){
     hr = ((hr < 10) ? "0" : "") + hr;
     min = ((min < 10) ? "0" : "") + min;
     sec = ((sec < 10) ? "0" : "") + sec;
-    var str="<p style='font-size:40px'>" +hr + ":" + min + ":" + sec+'</p>'+dow + " " + day + "/" + month + "/" + year
+    var str="<p style='font-size:5rem'>" +hr + ":" + min + ":" + sec+'</p><p style="font-size: 4rem">'+dow + " " + day + "/" + month + "/" + year + "</p>"
     return str;
 }
 function showTime(){
