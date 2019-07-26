@@ -20,3 +20,4 @@ Route::post('delete','AdminController@destroy');
 Route::post('show','AdminController@show');
 Route::post('update','AdminController@update');
 Route::post('import','AdminController@import');
+Route::get('nguoidung','AdminController@indexNguoidung');

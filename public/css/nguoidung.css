@@ -1,0 +1,99 @@
+html, body {
+    overflow: hidden;
+}
+th{
+    font-weight: 600 !important;
+    height: 40px
+}
+header {
+    height: 70px;
+}
+#vnclock{
+    font-weight:bold;
+    text-align:center;
+    font-size:20px;
+    margin:20px;
+    float: right;
+}
+.panel-heading {
+    border-bottom: none;
+}
+.wrapper{
+    margin-top: 0px;
+}
+
+/* Other options */
+.body-half-screen{
+    max-height: 55vh;
+}
+#main-content{
+    margin-left: 0px;
+}
+.white-bg{
+    background: transparent;
+    border: none;
+}
+
+/*QUANGANH*/
+
+* {
+    font-family: 'open sans';
+}
+.panel-body {
+    padding-top: 0;
+}
+.panel-body div {
+    position: relative;
+}
+.site-footer{
+    padding: 0px;
+    color: #ffffff;
+    background-image: url("img/layer6.png");
+}
+.ten{
+    width: 450px !important;
+}
+.khoa{
+    width: 70px !important;
+}
+.tuoi{
+    width: 75px !important;
+}
+.pppt{
+    width: 490px !important;
+}
+#contain {
+    position: absolute;
+    top: 40px;
+    height: 400px;
+    overflow-y: hidden;
+    margin-top: 20px;
+    width: 100% !important;
+}
+
+#table_fixed thead th {
+    font-size: 14px;
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#table_fixed tbody tr {
+    height: 400px;
+}
+#table_fixed {
+    width: 100%;
+    box-sizing: border-box;
+}
+table {
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-color: #ffffff !important;
+}
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+}

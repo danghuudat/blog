@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\LichMo;
+use Carbon\Carbon;
 use DB;
 use Illuminate\Http\Request;
 use Excel;
@@ -124,5 +125,12 @@ class AdminController extends Controller
         \Log::info($request);
         LichMo::where(['id'=>$request->id])->delete();
         return "delete success";
+    }
+    public function indexNguoidung(){
+        $mytime = Carbon::now();
+        $mytime=$mytime->toDateString();
+        $data=LichMo::where(['ngay'=>$mytime])->orderBy('stt')->get();
+        \Log::info($data);
+        return view("nguoidung")->with('lich', $data);;
     }
 }
