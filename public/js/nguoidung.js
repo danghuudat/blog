@@ -15,7 +15,7 @@ function pageScroll() {
     if ((objDiv.scrollTop + 400) == objDiv.scrollHeight) {
         objDiv.scrollTop = 0;
     }
-    my_time = setTimeout('pageScroll()', 5);
+    my_time = setTimeout('pageScroll()', 40);
 }
 
 function getWidthHeader(id_header, id_scroll) {

@@ -48,7 +48,6 @@ header {
 .site-footer{
     padding: 0px;
     color: #ffffff;
-    background-image: url("img/layer6.png");
 }
 .ten{
     width: 450px !important;
@@ -64,13 +63,21 @@ header {
 }
 #contain {
     position: absolute;
-    top: 40px;
     height: 400px;
-    overflow-y: hidden;
-    margin-top: 20px;
+    overflow: hidden;
     width: 100% !important;
 }
+.row_1{
+    color: black;
+    margin-bottom: 20px;
+    font-size: 2rem;
 
+}
+.row_2{
+    color: red;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
 #table_fixed thead th {
     font-size: 14px;
     background-color: transparent;

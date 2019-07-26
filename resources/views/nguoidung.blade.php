@@ -46,61 +46,8 @@
                     <img src="img/lich.jpg" style="width: 100%; height: 50px; padding-top: 10px">
                 </header>
                 <div class="panel-body">
-                    <!--  <div class="adv-table editable-table table-height" >
-                         <table border="1" id="table_fixed" cellpadding="0">
-                             <thead>
-                               <tr>
-                                 <th style="max-width: 3%; width: 3% !important">STT</th>
-                                 <th class="ten">HỌ VÀ TÊN</th>
-                                 <th style="max-width: 5%" class="tuoi">TUỔI</th>
-                                 <th style="max-width: 5%; width: 5% !important" class="khoa">KHOA</th>
-                                 <th style="max-width: 15%; width: 15% !important">CHẨN ĐOÁN BÁC SĨ</th>
-                                 <th style="max-width: 15%; width: 15% !important" class="pppt">PP PHẪU THUẬT</th>
-                                 <th>BS PHẪU THUẬT</th>
-                                 <th>PP VÔ CẢM GIẢM ĐAU</th>
-                                 <th style="max-width: 10%;width: 10% !important">BS GÂY MÊ </th>
-                                 <th>GIỜ MỔ DỰ KIẾN</th>
-                                 <th>TRẠNG THÁI BN</th>
-                               </tr>
-                             </thead>
-                             <tbody>
-                                 <tr>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                 </tr>
-                             </tbody>
-                         </table>
-                         <div id="contain">
-                           <table border="0" id="table_scroll" cellpadding="0">
-                             <tbody>
-                                 <tr>
-                                     <td style="max-width: 3%; width: 3%">1</td>
-                                     <td style="max-width: 9.4%;">Đỗ Ngọc Hoa</td>
-                                     <td style="max-width: 3%; width: 2%">20</td>
-                                     <td style="max-width: 2%; width: 2%">RHM</td>
-                                     <td style="max-width: 15%; width: 15%">Răng thừa ngầm hàm dưới bên phải + 4r8 mọc lệch</td>
-                                     <td style="max-width: 15%; width: 17%">Pt lấy răng thừa ngầm + nhổ 4r8</td>
-                                     <td>PGS Lê Sơn</td>
-                                     <td style="width: 255px">Gây mê</td>
-                                     <td style="width: 255px">Ths Thảo</td>
-                                     <td style="width: 200px"></td>
-                                     <td>BN chưa mổ</td>
-                                 </tr>
 
-                             </tbody>
-                           </table>
-                         </div>
-                     </div> -->
-                    <div class="row" id="headerTable">
+                    <div class="row" id="headerTable" style="font-size: 2rem;font-weight: bold">
                         <div class="col-sm-2" >
                             <div class="row">
                                 <div class="col-sm-3" style="">STT</div>
@@ -133,41 +80,53 @@
                             </div>
                         </div>
                     </div>
-                    <div id='table_scroll' style="height: 300px; overflow: hidden;margin-top: 20px">
+                    <div id='table_scroll' style="height: 400px; overflow: hidden;margin-top: 20px">
                         <div id="contain">
-                            <div class="row">
-                                <div class="col-sm-2" >
-                                    <div class="row">
-                                        <div class="col-sm-3" style="">1</div>
-                                        <div class="col-sm-9" style="">Đặng Hữu Đạt</div>
+                            <?php $row=1 ?>
+
+                        @foreach($lich as $record)
+                            <?php if($row==1){
+                                        $row=2;
+                                    }
+                                    else{
+                                        $row=1;
+                                    }
+
+                                    ?>
+                                <div class="row row_{{$row}}">
+                                    <div class="col-sm-2" >
+                                        <div class="row">
+                                            <div class="col-sm-3" style="">{{$record->stt}}</div>
+                                            <div class="col-sm-9" style="">{{$record->tenbenhnhan}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3" >
+                                        <div class="row">
+                                            <div class="col-sm-3" style="">{{$record->tuoi}}</div>
+                                            <div class="col-sm-3" style="">{{$record->khoa}}</div>
+                                            <div class="col-sm-6" style="">{{$record->chandoan}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3" >
+                                        <div class="row">
+                                            <div class="col-sm-8" style="">{{$record->ppphauthuat}}</div>
+                                            <div class="col-sm-4" style="">{{$record->bsphauthuat}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2" >
+                                        <div class="row">
+                                            <div class="col-sm-7" style="">{{$record->ppvocamvagiamdau}}</div>
+                                            <div class="col-sm-5" style="">{{$record->bsgayme}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2" >
+                                        <div class="row">
+                                            <div class="col-sm-4" style="">{{$record->giomodukien}}</div>
+                                            <div class="col-sm-8" style="">{{$record->trangthaicuabenhnhan}}</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-3" >
-                                    <div class="row">
-                                        <div class="col-sm-3" style="">30</div>
-                                        <div class="col-sm-3" style="">UB</div>
-                                        <div class="col-sm-6" style="">Không làm sao cả</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3" >
-                                    <div class="row">
-                                        <div class="col-sm-8" style="">Không phẫu thuật</div>
-                                        <div class="col-sm-4" style="">Không ai</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2" >
-                                    <div class="row">
-                                        <div class="col-sm-7" style="">Không gây me</div>
-                                        <div class="col-sm-5" style="">Không ai</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2" >
-                                    <div class="row">
-                                        <div class="col-sm-4" style="">Không có</div>
-                                        <div class="col-sm-8" style="">Tốt</div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                             <div class="row">
                                 <div class="col-sm-2" >
                                     <div class="row">

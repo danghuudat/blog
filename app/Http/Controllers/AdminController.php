@@ -130,7 +130,6 @@ class AdminController extends Controller
         $mytime = Carbon::now();
         $mytime=$mytime->toDateString();
         $data=LichMo::where(['ngay'=>$mytime])->orderBy('stt')->get();
-        \Log::info($data);
         return view("nguoidung")->with('lich', $data);;
     }
 }
