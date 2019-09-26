@@ -72,31 +72,29 @@ class AdminController extends Controller
         $path=$request->file('selectFile')->getRealPath();
         $data =\Excel::load($path)->get();
         if($data->count()>0){
-
-            foreach($data->toArray() as $key =>$value){
-                $insert_data[]=array(
-
-                    'stt'=>$value['stt'],
-                    'tenbenhnhan'=>$value['hoten'],
-                    'tuoi'=>$value['tuoi'],
-                    'khoa'=>$value['khoa'],
-                    'chandoan'=>$value['chandoan'],
-                    'ppphauthuat'=>$value['ppphauthuat'],
-                    'bsphauthuat'=>$value['bsphauthuat'],
-                    'ppvocamvagiamdau'=>$value['ppvocam'],
-                    'bsgayme'=>$value['bsgayme'],
-                    'giomodukien'=>$value['giomo'],
-                    'trangthaicuabenhnhan'=>$value['trangthai'],
-                    'ngay'=>$value['ngay']
-                );
+            $insert_data=[];
+            $data2=[];
+            foreach($data->toArray()[0] as $key =>$value){
+                if (isset($value['stt'])){
+                    $data3=array(
+                        'stt'=>$value['stt'],
+                        'tenbenhnhan'=>$value['hoten'],
+                        'tuoi'=>$value['tuoi'],
+                        'khoa'=>$value['khoa'],
+                        'chandoan'=>$value['chandoan'],
+                        'ppphauthuat'=>$value['ppphauthuat'],
+                        'bsphauthuat'=>$value['bsphauthuat'],
+                        'ppvocamvagiamdau'=>$value['ppvocam'],
+                        'bsgayme'=>$value['bsgayme'],
+                        'trangthaicuabenhnhan'=>$value['trangthai'],
+                    );
+                    array_push($data2,$data3);
+                }
             }
-            if(!empty($insert_data)){
-                DB::table('lich_mos')->insert($insert_data);
-            }
+            LichMo::insert($data2);
         }
         return back()->with('success','import thành công');
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -129,7 +127,7 @@ class AdminController extends Controller
     public function indexNguoidung(){
         $mytime = Carbon::now();
         $mytime=$mytime->toDateString();
-        $data=LichMo::where(['ngay'=>$mytime])->orderBy('stt')->get();
+        $data=LichMo::orderBy('stt')->get();
         return view("nguoidung")->with('lich', $data);;
     }
 }
