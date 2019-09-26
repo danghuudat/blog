@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a293b404-afd2-48cf-852e-9631df57d2b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nguoidung.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nguoidung.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="a293b404-afd2-48cf-852e-9631df57d2b8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/nguoidung.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="73">
-              <caret line="133" column="95" selection-start-line="133" selection-start-column="95" selection-end-line="133" selection-end-column="95" />
+              <caret line="133" selection-start-line="133" selection-end-line="134" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#3036#3043#1#HTML" expanded="true" />
@@ -438,16 +434,15 @@
       <workItem from="1564110489203" duration="1004000" />
       <workItem from="1564121277027" duration="437000" />
       <workItem from="1564123753483" duration="7506000" />
-      <workItem from="1569502743944" duration="1151000" />
+      <workItem from="1569502743944" duration="1239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30135000" />
+    <option name="totallyTimeSpent" value="30223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -693,7 +688,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/nguoidung.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
-          <caret line="133" column="95" selection-start-line="133" selection-start-column="95" selection-end-line="133" selection-end-column="95" />
+          <caret line="133" selection-start-line="133" selection-end-line="134" />
           <folding>
             <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#3036#3043#1#HTML" expanded="true" />

@@ -91,7 +91,7 @@
 </head>
 
 <body>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+<span style="font-size:30px;cursor:pointer; display: none" onclick="openNav()">&#9776; open</span>
 
 <div id="player" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -269,7 +269,7 @@
         if(event.data === 0) {
             stopVideo();
             closeNav();
-            adv_time = setTimeout('showadv()', 1000*3);
+            adv_time = setTimeout('showadv()', 1000*30);
         }
         if (event.data === -1 || event.data === 3) {
             playVideo();
